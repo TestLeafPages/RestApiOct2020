@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "d394d3fa-178a-4b23-946a-d8b4d84e7c57",
+		"name": "Service Now",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Incident Management",
+			"item": [
+				{
+					"name": "Get All Incidents",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "India@123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://dev68594.service-now.com/api/now/table/incident?sysparm_fields=number,category,priority,sys_id",
+							"protocol": "https",
+							"host": [
+								"dev68594",
+								"service-now",
+								"com"
+							],
+							"path": [
+								"api",
+								"now",
+								"table",
+								"incident"
+							],
+							"query": [
+								{
+									"key": "sysparm_fields",
+									"value": "number,category,priority,sys_id"
+								},
+								{
+									"key": "number",
+									"value": "INC0000004",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new  incident without body",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/xml",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://dev68594.service-now.com/api/now/table/incident?sysparm_fields=number,sys_id",
+							"protocol": "https",
+							"host": [
+								"dev68594",
+								"service-now",
+								"com"
+							],
+							"path": [
+								"api",
+								"now",
+								"table",
+								"incident"
+							],
+							"query": [
+								{
+									"key": "sysparm_fields",
+									"value": "number,sys_id"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new  incident with body",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/xml"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<request>\r\n    <entry>\r\n        <short_description>from postman</short_description>\r\n        <category>database</category>\r\n    </entry>\r\n</request>"
+						},
+						"url": {
+							"raw": "https://dev68594.service-now.com/api/now/table/incident?sysparm_fields=number,sys_id",
+							"protocol": "https",
+							"host": [
+								"dev68594",
+								"service-now",
+								"com"
+							],
+							"path": [
+								"api",
+								"now",
+								"table",
+								"incident"
+							],
+							"query": [
+								{
+									"key": "sysparm_fields",
+									"value": "number,sys_id"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Change",
+			"item": [
+				{
+					"name": "Get all change",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "India@123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://dev68594.service-now.com/api/now/table/change_request",
+							"protocol": "https",
+							"host": [
+								"dev68594",
+								"service-now",
+								"com"
+							],
+							"path": [
+								"api",
+								"now",
+								"table",
+								"change_request"
+							],
+							"query": [
+								{
+									"key": "sysparm_fields",
+									"value": "short_description,type,number,sys_id",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all change in xml and emergency",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "India@123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://dev68594.service-now.com/api/now/table/change_request?sysparm_fields=number,sys_id&type=emergency",
+							"protocol": "https",
+							"host": [
+								"dev68594",
+								"service-now",
+								"com"
+							],
+							"path": [
+								"api",
+								"now",
+								"table",
+								"change_request"
+							],
+							"query": [
+								{
+									"key": "sysparm_fields",
+									"value": "number,sys_id"
+								},
+								{
+									"key": "type",
+									"value": "emergency"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "India@123",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "admin",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "821ea51a-afc4-4f9e-b4b1-0a1f45c48f3b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "0faec7e1-31fc-4c6c-8b11-805dbfd3bfd1",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
