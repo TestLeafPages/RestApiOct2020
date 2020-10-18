@@ -1,0 +1,113 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="result">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="parent"/>
+              <xs:element type="xs:string" name="made_sla"/>
+              <xs:element type="xs:string" name="caused_by"/>
+              <xs:element type="xs:string" name="watch_list"/>
+              <xs:element type="xs:string" name="upon_reject"/>
+              <xs:element type="xs:string" name="sys_updated_on"/>
+              <xs:element type="xs:byte" name="child_incidents"/>
+              <xs:element type="xs:string" name="hold_reason"/>
+              <xs:element type="xs:string" name="approval_history"/>
+              <xs:element type="xs:string" name="number"/>
+              <xs:element type="xs:string" name="resolved_by"/>
+              <xs:element type="xs:string" name="sys_updated_by"/>
+              <xs:element name="opened_by">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="link"/>
+                    <xs:element type="xs:string" name="value"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="user_input"/>
+              <xs:element type="xs:string" name="sys_created_on"/>
+              <xs:element name="sys_domain">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="link"/>
+                    <xs:element type="xs:string" name="value"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:byte" name="state"/>
+              <xs:element type="xs:string" name="sys_created_by"/>
+              <xs:element type="xs:string" name="knowledge"/>
+              <xs:element type="xs:string" name="order"/>
+              <xs:element type="xs:string" name="calendar_stc"/>
+              <xs:element type="xs:string" name="closed_at"/>
+              <xs:element type="xs:string" name="cmdb_ci"/>
+              <xs:element type="xs:string" name="delivery_plan"/>
+              <xs:element type="xs:string" name="contract"/>
+              <xs:element type="xs:byte" name="impact"/>
+              <xs:element type="xs:string" name="active"/>
+              <xs:element type="xs:string" name="work_notes_list"/>
+              <xs:element type="xs:string" name="business_service"/>
+              <xs:element type="xs:byte" name="priority"/>
+              <xs:element type="xs:string" name="sys_domain_path"/>
+              <xs:element type="xs:string" name="rfc"/>
+              <xs:element type="xs:string" name="time_worked"/>
+              <xs:element type="xs:string" name="expected_start"/>
+              <xs:element type="xs:string" name="opened_at"/>
+              <xs:element type="xs:string" name="business_duration"/>
+              <xs:element type="xs:string" name="group_list"/>
+              <xs:element type="xs:string" name="work_end"/>
+              <xs:element type="xs:string" name="caller_id"/>
+              <xs:element type="xs:string" name="reopened_time"/>
+              <xs:element type="xs:string" name="resolved_at"/>
+              <xs:element type="xs:string" name="approval_set"/>
+              <xs:element type="xs:string" name="subcategory"/>
+              <xs:element type="xs:string" name="work_notes"/>
+              <xs:element type="xs:string" name="short_description"/>
+              <xs:element type="xs:string" name="close_code"/>
+              <xs:element type="xs:string" name="correlation_display"/>
+              <xs:element type="xs:string" name="delivery_task"/>
+              <xs:element type="xs:string" name="work_start"/>
+              <xs:element type="xs:string" name="assignment_group"/>
+              <xs:element type="xs:string" name="additional_assignee_list"/>
+              <xs:element type="xs:string" name="business_stc"/>
+              <xs:element type="xs:string" name="description"/>
+              <xs:element type="xs:string" name="calendar_duration"/>
+              <xs:element type="xs:string" name="close_notes"/>
+              <xs:element type="xs:byte" name="notify"/>
+              <xs:element type="xs:string" name="service_offering"/>
+              <xs:element type="xs:string" name="sys_class_name"/>
+              <xs:element type="xs:string" name="closed_by"/>
+              <xs:element type="xs:string" name="follow_up"/>
+              <xs:element type="xs:string" name="parent_incident"/>
+              <xs:element type="xs:string" name="sys_id"/>
+              <xs:element type="xs:string" name="contact_type"/>
+              <xs:element type="xs:string" name="reopened_by"/>
+              <xs:element type="xs:byte" name="incident_state"/>
+              <xs:element type="xs:byte" name="urgency"/>
+              <xs:element type="xs:string" name="problem_id"/>
+              <xs:element type="xs:string" name="company"/>
+              <xs:element type="xs:byte" name="reassignment_count"/>
+              <xs:element type="xs:string" name="activity_due"/>
+              <xs:element type="xs:string" name="assigned_to"/>
+              <xs:element type="xs:byte" name="severity"/>
+              <xs:element type="xs:string" name="comments"/>
+              <xs:element type="xs:string" name="approval"/>
+              <xs:element type="xs:string" name="sla_due"/>
+              <xs:element type="xs:string" name="comments_and_work_notes"/>
+              <xs:element type="xs:string" name="due_date"/>
+              <xs:element type="xs:byte" name="sys_mod_count"/>
+              <xs:element type="xs:byte" name="reopen_count"/>
+              <xs:element type="xs:string" name="sys_tags"/>
+              <xs:element type="xs:byte" name="escalation"/>
+              <xs:element type="xs:string" name="upon_approval"/>
+              <xs:element type="xs:string" name="correlation_id"/>
+              <xs:element type="xs:string" name="location"/>
+              <xs:element type="xs:string" name="category"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
